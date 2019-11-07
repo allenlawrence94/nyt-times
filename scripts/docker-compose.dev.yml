@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  app:
+    build:
+      target: dev
+    image: times-dev
+    command: tail -f Dockerfile  # this just keeps the app container alive
+    volumes:
+    - ${PWD}:/app

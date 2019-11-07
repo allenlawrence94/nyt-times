@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  client:
+    container_name: client
+    image: allenlawrence94/e2e-client
+    volumes:
+      - "${PWD}/e2e:/e2e"
+    depends_on:
+      - app
+    command: pytest -v /e2e/e2e_test.py

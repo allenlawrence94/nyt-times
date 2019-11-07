@@ -1,0 +1,8 @@
+mode: Mainline
+branches: {}
+ignore:
+  sha: []
+major-version-bump-message: 'BREAKING CHANGE:' 
+minor-version-bump-message: 'feat\s?(\([a-zA-Z0-9_.-]*\))?\s?:'
+patch-version-bump-message: '(fix|chore|docs|style|refactor|test|ci|build|perf)\s?\([a-zA-Z0-9_.-]*\)?\s?:'
+no-bump-message: '[skip ci]'
