@@ -5,6 +5,13 @@ services:
     image: allenlawrence94/e2e-client
     volumes:
       - "${PWD}/e2e:/e2e"
+    working_dir: /e2e
     depends_on:
       - app
-    command: pytest -v /e2e/e2e_test.py
+    command: pytest -v e2e_test.py
+  app:
+    entrypoint: >
+      bash -c "curl https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -o wait.sh &&
+               chmod +x wait.sh && ./wait.sh db:5432 &&
+               alembic upgrade head &&
+               gunicorn --workers 1 --worker-class sanic.worker.GunicornWorker --bind 0.0.0.0:80 wsgi"

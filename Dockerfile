@@ -13,4 +13,4 @@ FROM base as prod
 COPY src src
 COPY alembic alembic
 COPY wsgi.py alembic.ini app.py /app/
-CMD gunicorn --workers 2 --worker-class sanic.worker.GunicornWorker --bind 0.0.0.0:80 wsgi
+ENTRYPOINT gunicorn --workers 2 --worker-class sanic.worker.GunicornWorker --bind 0.0.0.0:80 wsgi

@@ -525,6 +525,17 @@ websockets = ">=6.0,<7.0"
 
 [[package]]
 category = "main"
+description = "Easily document your Sanic API with a UI."
+name = "sanic-openapi"
+optional = false
+python-versions = "*"
+version = "0.6.0"
+
+[package.dependencies]
+sanic = ">=18.12.0"
+
+[[package]]
+category = "main"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
@@ -616,7 +627,7 @@ python-versions = ">=2.7"
 version = "0.5.1"
 
 [metadata]
-content-hash = "ff04ffc5583746c94ff4e21ff40a5ec8ea00d491a4056ae3e136af53d399d80a"
+content-hash = "e1dd7684d85ac7d97f8517e4589c1ff61ed96c75dd2586c295cad15287471184"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -672,6 +683,7 @@ requests = ["11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4", 
 requests-async = ["8731420451383196ecf2fd96082bfc8ae5103ada90aba185888499d7784dde6f"]
 rfc3986 = ["0344d0bd428126ce554e7ca2b61787b6a28d2bbd19fc70ed2dd85efe31176405", "df4eba676077cefb86450c8f60121b9ae04b94f65f85b69f3f731af0516b7b18"]
 sanic = ["22a46963af3bbab2a5e5e44625d01e253b319c9296e913c8292e8310dc8724ee", "7737773957447925a10ae4e66bfea40cb05319c2d916545c44e13b83f655f98e"]
+sanic-openapi = ["5f231835d2138873198d258fdb4f6d198235e53e7ad375ba5d070e7a368c49d0"]
 six = ["3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c", "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"]
 sqlalchemy = ["c30925d60af95443458ebd7525daf791f55762b106049ae71e18f8dd58084c2f"]
 traitlets = ["9c4bd2d267b7153df9152698efb1050a5d84982d3384a37b2c1f7723ba3e7835", "c6cb5e6f57c5a9bdaa40fa71ce7b4af30298fbab9ece9815b5d995ab6217c7d9"]

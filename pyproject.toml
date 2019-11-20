@@ -11,12 +11,11 @@ alembic = "^1.0"
 sanic = "^19.6"
 gunicorn = "^19.9"
 psycopg2-binary = "^2.8"
+sanic-openapi = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"
 pytest-cov = "^2.7"
-pytest-testmon = "^0.9.16"
-pytest-watch = "^4.2"
 requests = "^2.22"
 ipython = "^7.6"
 
