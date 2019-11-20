@@ -77,6 +77,7 @@ async def players(request):
 @application.route('/winner', methods=['GET'])
 @doc.summary("Who won today?")
 @doc.produces([str], content_type='application/json')
+@doc.consumes({"game": str}, location='parameters', required=True)
 async def winner(request):
     with session_scope() as sesh:
         with open('src/query/winner.sql', 'r') as f:

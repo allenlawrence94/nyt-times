@@ -9,6 +9,12 @@ RUN poetry install --no-dev
 FROM base AS dev
 RUN poetry install
 
+FROM dev as test
+COPY src src
+COPY test test
+COPY alembic alembic
+COPY alembic.ini alembic.ini
+
 FROM base as prod
 COPY src src
 COPY alembic alembic

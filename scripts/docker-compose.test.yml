@@ -4,4 +4,4 @@ services:
     build:
       target: test
     image: times-test
-    command: pytest -v --cov=src
+    command: pytest -v --cov=src test
